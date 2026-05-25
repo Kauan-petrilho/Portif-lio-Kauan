@@ -5,19 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfólio - Kauan Stringuetta Petrilho</title>
     <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="Portfólio de Kauan Stringuetta Petrilho - estudante de Engenharia de Software na UNIFIL">
 </head>
 <body>
-    <header class="hero">
-        <div class="container">
-            <h1>Olá, meu nome é Kauan Stringuetta Petrilho</h1>
-            <p>Estudo na UNIFIL e estou no 1º ano de Engenharia de Software.</p>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="logo" href="https://github.com/Kauan-petrilho" target="_blank" rel="noopener">Kauan Petrilho</a>
+            <nav class="main-nav">
+                <a href="#about">Sobre</a>
+                <a href="#projects">Projetos</a>
+                <a href="pi.html">PI</a>
+                <a href="#experience">Experiência</a>
+                <a href="#contact">Contato</a>
+            </nav>
+            <a class="github-btn" href="https://github.com/Kauan-petrilho" target="_blank" rel="noopener" aria-label="GitHub">
+                <svg viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+                </svg>
+            </a>
+        </div>
+        <div class="hero">
+            <div class="container hero-inner">
+                <div class="hero-text">
+                    <h1>Olá — eu sou Kauan Stringuetta Petrilho</h1>
+                    <p>Estudo na <strong>UNIFIL</strong> e estou no <strong>1º ano</strong> de Engenharia de Software.</p>
+                    <p class="lead">Interesse em desenvolvimento web, projetos práticos e aprendizado contínuo.</p>
+                    <div class="hero-ctas">
+                        <a class="btn btn-primary" href="#projects">Ver projetos</a>
+                        <a class="btn" href="#contact">Contato</a>
+                    </div>
+                </div>
+                <div class="hero-photo" aria-hidden="true">
+                    <svg width="140" height="140" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="avatar">
+                        <rect width="100" height="100" rx="16" fill="#111" />
+                        <text x="50%" y="54%" dominant-baseline="middle" text-anchor="middle" font-size="36" fill="#999">KP</text>
+                    </svg>
+                </div>
+            </div>
         </div>
     </header>
 
     <main class="container">
-        <section class="about">
+        <section id="about" class="about">
             <h2>Sobre mim</h2>
             <p>Sou estudante de Engenharia de Software com interesse em desenvolvimento web e tecnologia. Busco aprender novas linguagens, construir projetos práticos e crescer na área de software.</p>
+            <p>Meu foco atual: HTML, CSS, JavaScript básico e boas práticas de desenvolvimento.</p>
         </section>
 
         <section class="education">
@@ -27,20 +59,40 @@
             <p>Ano: <strong>1º ano</strong></p>
         </section>
 
-        <section class="skills">
-            <h2>Habilidades</h2>
-            <ul>
-                <li>HTML</li>
-                <li>CSS BÁSICO</li>
-                <li>PYTHON INTERMEDIARIO</li>
-                <li>Trabalho em equipe</li>
-            </ul>
+        <section id="projects" class="projects">
+            <h2>Projetos</h2>
+            <div class="projects-grid">
+                <article class="project-card">
+                    <h3>Calculadora</h3>
+                    <p>Projeto em HTML/CSS/JS que implementa operações básicas e prática com DOM.</p>
+                </article>
+                <article class="project-card">
+                    <h3>Verificador de Primos</h3>
+                    <p>Implementação de algoritmo para verificar números primos — foco em lógica.</p>
+                </article>
+                <article class="project-card">
+                    <h3>Outros scripts</h3>
+                    <p>Exemplos de exercícios e pequenos programas desenvolvidos durante os estudos.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="experience" class="experience">
+            <h2>Experiência</h2>
+            <p>Projetos acadêmicos e participação em atividades de programação. Busco oportunidades para aplicar conhecimentos em projetos reais.</p>
+        </section>
+
+        <section id="contact" class="contact">
+            <h2>Contato</h2>
+            <p>E-mail: <a href="mailto:kauanpetrilho@gmail.com">kauanpetrilho@gmail.com</a></p>
+            <p>GitHub: <a href="https://github.com/Kauan-petrilho" target="_blank" rel="noopener">https://github.com/Kauan-petrilho</a></p>
+            <p>LinkedIn: adicione seu link quando quiser.</p>
         </section>
     </main>
 
     <footer>
         <div class="container">
-            <p>Portfólio criado por Kauan Stringuetta Petrilho.</p>
+            <p>Portfólio criado por Kauan Stringuetta Petrilho. — <a href="https://github.com/Kauan-petrilho" target="_blank" rel="noopener">GitHub</a></p>
         </div>
     </footer>
 </body>
