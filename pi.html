@@ -10,6 +10,10 @@
       body{background:#000;color:#e6e6e6;font-family:Inter,Arial,sans-serif}
       .container{width:min(1100px,92%);margin:2.4rem auto}
       a{color:#9fd7d0}
+      .subject-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem;margin-top:1rem}
+      .subject-card{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);border-radius:14px;padding:1rem;}
+      .subject-card h3{margin-bottom:0.6rem;color:#fff}
+      .subject-card p{color:#d4d4d4;line-height:1.5}
       /* esconder botão do GitHub nesta página para evitar sobreposição */
       .github-btn{display:none !important}
       /* botão voltar fixo no canto superior esquerdo */
@@ -18,13 +22,40 @@
     </style>
 </head>
 <body>
-    <a class="back-btn" href="portfolio.html">voltar</a>
+    <a class="back-btn" href="portfolio.html">← voltar</a>
     <main class="container">
         <h1>PI</h1>
-        <p>Esta é a página "PI". Você pode usar esta página para mostrar um projeto, um relatório ou qualquer conteúdo relacionado ao PI.</p>
-        <h2>Sobre</h2>
-        <p>Adicione aqui informações específicas sobre o que significa "PI" no seu contexto — por exemplo, um projeto importante, um trabalho acadêmico, ou uma página dedicada.</p>
-        
+        <p>Esta é a página "PI". Aqui estão as matérias relacionadas ao meu projeto e estudos.</p>
+
+        <section class="subjects">
+            <h2>Matérias</h2>
+            <div class="subject-grid">
+                <div class="subject-card">
+                    <h3>Desenvolvimento de aplicativos móveis</h3>
+                    <p>Explique aqui o que você aprendeu sobre criação de apps, interfaces e funcionalidades para dispositivos móveis.</p>
+                </div>
+                <div class="subject-card">
+                    <h3>Gerência de requisitos</h3>
+                    <p>Explique aqui como você aprendeu a coletar, documentar e organizar requisitos de um sistema.</p>
+                </div>
+                <div class="subject-card">
+                    <h3>Lógica de programação</h3>
+                    <p>Explique aqui os conceitos de lógica, fluxos, condições e estruturas usadas em programação.</p>
+                </div>
+                <div class="subject-card">
+                    <h3>GitHub</h3>
+                    <p>Explique aqui como você usa o GitHub para versionar código, colaborar e compartilhar seus projetos.</p>
+                </div>
+                <div class="subject-card">
+                    <h3>Projeto interdisciplinar</h3>
+                    <p>Explique aqui como você aplicou conhecimentos de várias disciplinas em um projeto integrado.</p>
+                </div>
+                <div class="subject-card">
+                    <h3>Matemática discreta - Tabela verdade</h3>
+                    <p>Explique aqui o que você aprendeu sobre tabelas verdade e lógica discreta.</p>
+                </div>
+            </div>
+        </section>
     </main>
 </body>
 </html>
