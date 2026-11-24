@@ -1,79 +1,129 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PI - Kauan Petrilho</title>
+    <meta name="description" content="Página PI de Kauan Petrilho: matérias e atividades do primeiro ano">
     <link rel="stylesheet" href="style.css">
-    <meta name="description" content="Página PI de Kauan Petrilho">
-    <style>
-      body{background:#000;color:#e6e6e6;font-family:Inter,Arial,sans-serif}
-      .container{width:min(1100px,92%);margin:2.4rem auto}
-      a{color:#9fd7d0}
-      .subject-grid{display:grid;grid-template-columns:1fr;gap:1.5rem;margin-top:1rem}
-      .subject-card{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);border-radius:14px;padding:2rem;min-height:200px;}
-      .subject-card h3{margin-bottom:0.6rem;color:#fff}
-      .subject-card p{color:#d4d4d4;line-height:1.5}
-      /* esconder botão do GitHub nesta página para evitar sobreposição */
-      .github-btn{display:none !important}
-      /* botão voltar fixo no canto superior esquerdo */
-      .back-btn{position:fixed;top:12px;left:12px;padding:8px 12px;border-radius:8px;background:transparent;border:0;color:#e6e6e6;text-decoration:none;font-weight:600;z-index:10001;transition:transform 160ms ease, color 160ms}
-      .back-btn:hover{transform:translateY(-3px);color:#fff}
-    </style>
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <a class="back-btn" href="index.html">← voltar</a>
-    <main class="container">
-        <h1>PI</h1>
-        <p>Esta é a página "PI". Aqui estão as matérias relacionadas ao meu projeto e estudos.</p>
+    <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
 
-        <section class="subjects">
-            <h2>Matérias</h2>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="logo" href="index.html">Kauan Petrilho</a>
+            <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Abrir menu">
+                <span></span><span></span><span></span>
+            </button>
+            <nav id="main-nav" class="main-nav" aria-label="Navegação principal">
+                <a href="index.html">Início</a>
+                <a href="index.html#about">Sobre</a>
+                <a href="projetos.html">Projetos</a>
+                <a href="pi.html" aria-current="page">PI</a>
+                <a href="index.html#contact">Contato</a>
+            </nav>
+            <div class="header-actions">
+                <a class="icon-btn" href="https://github.com/Kauan-petrilho" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub">
+                    <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+                </a>
+                <a class="icon-btn" href="https://www.linkedin.com/in/kauan-petrilho-874bb33b4/" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn">
+                    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5C4.98 4.88 3.88 6 2.49 6 1.1 6 0 4.88 0 3.5 0 2.12 1.1 1 2.49 1 3.88 1 4.98 2.12 4.98 3.5zM0 8.99h4.98v14H0v-14zm7.5 0h4.78v1.89h.07c.67-1.27 2.31-2.6 4.76-2.6 5.08 0 6.01 3.34 6.01 7.68v8.03h-4.98v-7.12c0-1.7-.03-3.89-2.37-3.89-2.38 0-2.74 1.86-2.74 3.79v7.22H7.5v-14z"/></svg>
+                </a>
+                <a class="icon-btn" href="mailto:kauanpetrilho@gmail.com" aria-label="Enviar e-mail" title="Gmail">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main id="conteudo" class="container">
+        <section aria-labelledby="titulo-pi">
+            <h1 id="titulo-pi">PI</h1>
+            <p class="page-intro">Aqui estão as matérias relacionadas ao meu projeto e estudos. Clique em uma matéria para ler o que aprendi.</p>
+        </section>
+
+        <section aria-labelledby="titulo-materias">
+            <h2 id="titulo-materias">Matérias</h2>
             <div class="subject-grid">
-                <div class="subject-card">
-                    <h3>Desenvolvimento de aplicativos móveis</h3>
-                    <p>Aprendi que a prototipação é uma etapa importante do desenvolvimento de sistemas, pois permite testar e validar ideias antes da implementação. Também compreendi conceitos fundamentais do vocabulário de sistemas, como CRUD (criar, ler, atualizar e excluir dados), workflow (fluxo de processos), integração entre sistemas, estados, permissões e auditoria. Além disso, estudei os diferentes níveis de prototipação, desde os protótipos de baixa fidelidade (rascunhos e wireframes) até os de alta fidelidade, que representam com maior precisão o produto final. A prototipação ajuda a identificar erros, reduzir custos de desenvolvimento e melhorar a comunicação entre a equipe e os usuários.Como atividade avaliativa tivemos que realizar uma prototipação de um aplicativo móvel, desenvolvendo no figma telas para um aplicativo de educação.    </p>
-                </div>
-                <div class="subject-card">
-                    <h3>Gerência de requisitos</h3>
-                    <p>Aprendi os conceitos fundamentais da Engenharia de Software e da Gerência de Requisitos. Entendi que os requisitos representam as necessidades e expectativas dos usuários e que seu levantamento é essencial para garantir que o sistema desenvolvido resolva o problema correto. Também aprendi a diferença entre requisitos funcionais, que definem o que o sistema deve fazer, e requisitos não funcionais, que definem como o sistema deve funcionar, considerando aspectos como usabilidade, confiabilidade, desempenho e suportabilidade. Além disso, estudei as fases do ciclo de vida do software, os modelos de desenvolvimento, a importância da documentação e validação dos requisitos e as principais técnicas de levantamento de requisitos, como entrevistas, questionários e brainstorming. Esses conhecimentos ajudam a reduzir erros, controlar mudanças e aumentar a qualidade do software desenvolvido. Como atividade Realizamos 4 diferentes. Primeira foi um formulário onde a ideia era o professor entender se entendemos o conceitos básicos de gerência de requisitos. A segunda foi onde assistimos um vídeo e listar 10 problemas encontrados no ciclo de desenvolvimento do sistema apresentado. Na terceira atividade tivemos que elaborar um roteiro de entrevista de uma empresa ficticia que eu e meu amigos criamos, preenchendo nome da empresa, processo da empresa e necessidades. Na quarta e última fomos escolhidos como clientes, e tínhamos que criar slides onde diziamos que esperávamos de processos e novas soluções para essa empresa. Além da prova que englobou todo o material que já citei.  </p>
-                </div>
-                <div class="subject-card">
-                    <h3>Lógica de programação</h3>
-                    <p>Durante a disciplina de Lógica de Programação, aprendi os conceitos fundamentais necessários para o desenvolvimento de algoritmos e programas. Os conteúdos foram apresentados utilizando as linguagens Java, C e Portugol, sendo o Portugol WebStudio a principal ferramenta utilizada para a realização das atividades práticas.
+                <details class="subject-card" open>
+                    <summary><h3>Desenvolvimento de aplicativos móveis</h3></summary>
+                    <div class="subject-body">
+                        <p>Aprendi que a prototipação é uma etapa importante do desenvolvimento de sistemas, pois permite testar e validar ideias antes da implementação. Também compreendi conceitos fundamentais do vocabulário de sistemas, como CRUD (criar, ler, atualizar e excluir dados), workflow (fluxo de processos), integração entre sistemas, estados, permissões e auditoria.</p>
+                        <p>Além disso, estudei os diferentes níveis de prototipação, desde os protótipos de baixa fidelidade (rascunhos e wireframes) até os de alta fidelidade, que representam com maior precisão o produto final. A prototipação ajuda a identificar erros, reduzir custos de desenvolvimento e melhorar a comunicação entre a equipe e os usuários.</p>
+                        <p>Como atividade avaliativa, fiz a prototipação de um aplicativo móvel: desenvolvi no Figma as telas de um aplicativo de educação.</p>
+                    </div>
+                </details>
 
-Ao longo da disciplina, desenvolvi aproximadamente 10 listas de exercícios, abordando desde problemas mais simples, como cálculo de médias, soma de notas, operações matemáticas, estruturas condicionais e de repetição, até programas mais elaborados que exigiam maior capacidade de análise e resolução de problemas.
+                <details class="subject-card">
+                    <summary><h3>Gerência de requisitos</h3></summary>
+                    <div class="subject-body">
+                        <p>Aprendi os conceitos fundamentais da Engenharia de Software e da Gerência de Requisitos. Entendi que os requisitos representam as necessidades e expectativas dos usuários e que seu levantamento é essencial para garantir que o sistema desenvolvido resolva o problema correto. Também aprendi a diferença entre requisitos funcionais, que definem o que o sistema deve fazer, e requisitos não funcionais, que definem como o sistema deve funcionar, considerando aspectos como usabilidade, confiabilidade, desempenho e suportabilidade.</p>
+                        <p>Além disso, estudei as fases do ciclo de vida do software, os modelos de desenvolvimento, a importância da documentação e validação dos requisitos e as principais técnicas de levantamento de requisitos, como entrevistas, questionários e brainstorming. Esses conhecimentos ajudam a reduzir erros, controlar mudanças e aumentar a qualidade do software desenvolvido.</p>
+                        <p>Atividades realizadas:</p>
+                        <ol>
+                            <li>Um formulário para o professor avaliar se entendemos os conceitos básicos de gerência de requisitos.</li>
+                            <li>Assistimos a um vídeo e listamos 10 problemas encontrados no ciclo de desenvolvimento do sistema apresentado.</li>
+                            <li>Elaboramos um roteiro de entrevista para uma empresa fictícia criada por mim e meus amigos, preenchendo nome da empresa, processo da empresa e necessidades.</li>
+                            <li>Fomos escolhidos como clientes e criamos slides dizendo o que esperávamos de processos e novas soluções para essa empresa.</li>
+                        </ol>
+                        <p>Também houve uma prova que englobou todo o material citado.</p>
+                    </div>
+                </details>
 
-Também aprendi conceitos como variáveis, tipos de dados, entrada e saída de informações, operadores lógicos e matemáticos, estruturas de decisão (if/else), estruturas de repetição (enquanto, para e faça-enquanto) e organização de algoritmos.
+                <details class="subject-card">
+                    <summary><h3>Lógica de programação</h3></summary>
+                    <div class="subject-body">
+                        <p>Durante a disciplina de Lógica de Programação, aprendi os conceitos fundamentais necessários para o desenvolvimento de algoritmos e programas. Os conteúdos foram apresentados utilizando as linguagens Java, C e Portugol, sendo o Portugol WebStudio a principal ferramenta utilizada para as atividades práticas.</p>
+                        <p>Ao longo da disciplina, desenvolvi aproximadamente 10 listas de exercícios, abordando desde problemas mais simples, como cálculo de médias, soma de notas, operações matemáticas, estruturas condicionais e de repetição, até programas mais elaborados que exigiam maior capacidade de análise e resolução de problemas.</p>
+                        <p>Também aprendi conceitos como variáveis, tipos de dados, entrada e saída de informações, operadores lógicos e matemáticos, estruturas de decisão (if/else), estruturas de repetição (enquanto, para e faça-enquanto) e organização de algoritmos.</p>
+                        <p>Como atividade final, desenvolvi um sistema de caixa de supermercado, projeto que reuniu diversos conceitos aprendidos ao longo da disciplina, envolvendo cadastro de produtos, cálculos de valores, controle de compras e interação com o usuário. Esse trabalho permitiu aplicar na prática os conhecimentos adquiridos e fortalecer o raciocínio lógico e a capacidade de programação.</p>
+                    </div>
+                </details>
 
-Como atividade final, desenvolvi um sistema de caixa de supermercado, projeto que reuniu diversos conceitos aprendidos ao longo da disciplina, envolvendo cadastro de produtos, cálculos de valores, controle de compras e interação com o usuário. Esse trabalho permitiu aplicar de forma prática os conhecimentos adquiridos e fortalecer o raciocínio lógico e a capacidade de programação..</p>
-                </div>
-                <div class="subject-card">
-                    <h3>GitHub</h3>
-                    <p ></p>Durante as atividades relacionadas ao Git e GitHub, aprendi os conceitos básicos de versionamento de código e colaboração em projetos de software. Estudei comandos fundamentais como git add, git commit, git push e git pull, compreendendo sua importância no controle de versões e na sincronização de arquivos entre o computador local e os repositórios remotos.
-                       Ao longo das aulas e atividades práticas, realizei diversas tarefas utilizando o Visual Studio Code integrado ao Git, como clonar repositórios (git clone), criar e modificar arquivos, registrar alterações por meio de commits e enviar atualizações para o GitHub. Também aprendi a baixar alterações feitas por outros usuários, manter os projetos atualizados e organizar o histórico de desenvolvimento.
+                <details class="subject-card">
+                    <summary><h3>GitHub</h3></summary>
+                    <div class="subject-body">
+                        <p>Durante as atividades relacionadas ao Git e GitHub, aprendi os conceitos básicos de versionamento de código e colaboração em projetos de software. Estudei comandos fundamentais como git add, git commit, git push e git pull, compreendendo sua importância no controle de versões e na sincronização de arquivos entre o computador local e os repositórios remotos.</p>
+                        <p>Ao longo das aulas e atividades práticas, realizei diversas tarefas utilizando o Visual Studio Code integrado ao Git, como clonar repositórios (git clone), criar e modificar arquivos, registrar alterações por meio de commits e enviar atualizações para o GitHub. Também aprendi a baixar alterações feitas por outros usuários, manter os projetos atualizados e organizar o histórico de desenvolvimento.</p>
+                        <p>Essas atividades permitiram desenvolver conhecimentos sobre trabalho colaborativo, gerenciamento de versões, armazenamento de projetos em repositórios remotos e utilização de ferramentas amplamente empregadas no desenvolvimento de software.</p>
+                    </div>
+                </details>
 
-Essas atividades permitiram desenvolver conhecimentos sobre trabalho colaborativo, gerenciamento de versões, armazenamento de projetos em repositórios remotos e utilização de ferramentas amplamente empregadas no desenvolvimento de software..</p>
-                </div>
-                <div class="subject-card">
-                    <h3>Projeto interdisciplinar</h3>
-                    <p>No Projeto Interdisciplinar, desenvolvemos uma startup voltada para a área da educação. A proposta consistiu na criação de uma plataforma online que facilita a conexão entre alunos, universitários e professores particulares, tornando mais simples a busca por profissionais qualificados para aulas de reforço, preparação para provas, vestibulares e disciplinas acadêmicas.
+                <details class="subject-card">
+                    <summary><h3>Projeto interdisciplinar</h3></summary>
+                    <div class="subject-body">
+                        <p>No Projeto Interdisciplinar, desenvolvemos uma startup voltada para a área da educação. A proposta consistiu na criação de uma plataforma online que facilita a conexão entre alunos, universitários e professores particulares, tornando mais simples a busca por profissionais qualificados para aulas de reforço, preparação para provas, vestibulares e disciplinas acadêmicas.</p>
+                        <p>Durante o desenvolvimento do projeto, passamos por diversas etapas importantes, como a identificação de um problema real no mercado educacional, pesquisa de público-alvo, análise de concorrentes, definição da proposta de valor, elaboração do modelo de negócios e desenvolvimento da ideia da plataforma. Também realizamos estudos sobre as necessidades dos usuários, discutimos funcionalidades do site e definimos estratégias para tornar o serviço acessível e eficiente.</p>
+                        <p>Após a validação da ideia e a estruturação do negócio, organizamos todas as informações em um pitch, apresentando o problema identificado, a solução proposta, o funcionamento da plataforma, os diferenciais da startup e o potencial de impacto no setor educacional.</p>
+                        <p>O projeto contribuiu para o desenvolvimento de habilidades de empreendedorismo, trabalho em equipe, inovação, planejamento estratégico e apresentação de negócios.</p>
+                    </div>
+                </details>
 
-Durante o desenvolvimento do projeto, passamos por diversas etapas importantes, como a identificação de um problema real no mercado educacional, pesquisa de público-alvo, análise de concorrentes, definição da proposta de valor, elaboração do modelo de negócios e desenvolvimento da ideia da plataforma. Também realizamos estudos sobre as necessidades dos usuários, discutimos funcionalidades do site e definimos estratégias para tornar o serviço acessível e eficiente.
-
-Após a validação da ideia e a estruturação do negócio, organizamos todas as informações em um pitch, apresentando o problema identificado, a solução proposta, o funcionamento da plataforma, os diferenciais da startup e o potencial de impacto no setor educacional.
-
-O projeto contribuiu para o desenvolvimento de habilidades de empreendedorismo, trabalho em equipe, inovação, planejamento estratégico e apresentação de negócios..</p>
-                </div>
-                <div class="subject-card">
-                    <h3>Matemática discreta - Tabela verdade</h3>
-                    <p>Aprendi conceitos fundamentais de Matemática Discreta, com destaque para as tabelas-verdade, utilizadas para analisar proposições lógicas e determinar se uma expressão é verdadeira ou falsa em diferentes situações. Estudei os principais operadores lógicos, como negação, conjunção, disjunção, condicional e bicondicional, e aprendi a construir e interpretar tabelas-verdade para verificar equivalências lógicas, tautologias, contradições e contingências.
-                    Também aprendi sobre métodos dedutivos, que permitem chegar a conclusões lógicas a partir de premissas previamente estabelecidas. Além disso, estudei regras de inferência, argumentação lógica e técnicas de demonstração, desenvolvendo a capacidade de analisar problemas de forma estruturada e lógica. Esses conhecimentos são importantes para áreas como programação, desenvolvimento de sistemas e resolução de problemas computacionais. Fizemos diversas listas sobre esse conteúdo e tívemos que programar em grupo um sistema lógico de calculadora, contendo algumas aplicações práticas desses conceitos. </p>
-                </div>
+                <details class="subject-card">
+                    <summary><h3>Matemática discreta - Tabela verdade</h3></summary>
+                    <div class="subject-body">
+                        <p>Aprendi conceitos fundamentais de Matemática Discreta, com destaque para as tabelas-verdade, utilizadas para analisar proposições lógicas e determinar se uma expressão é verdadeira ou falsa em diferentes situações. Estudei os principais operadores lógicos, como negação, conjunção, disjunção, condicional e bicondicional, e aprendi a construir e interpretar tabelas-verdade para verificar equivalências lógicas, tautologias, contradições e contingências.</p>
+                        <p>Também aprendi sobre métodos dedutivos, que permitem chegar a conclusões lógicas a partir de premissas previamente estabelecidas. Além disso, estudei regras de inferência, argumentação lógica e técnicas de demonstração, desenvolvendo a capacidade de analisar problemas de forma estruturada e lógica. Esses conhecimentos são importantes para áreas como programação, desenvolvimento de sistemas e resolução de problemas computacionais.</p>
+                        <p>Fizemos diversas listas sobre esse conteúdo e, em grupo, programamos um sistema lógico de calculadora com algumas aplicações práticas desses conceitos.</p>
+                    </div>
+                </details>
             </div>
         </section>
     </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>© <span id="ano">2026</span> Kauan Stringuetta Petrilho</p>
+            <nav aria-label="Links externos">
+                <ul class="footer-links">
+                    <li><a href="https://github.com/Kauan-petrilho" target="_blank" rel="noopener">GitHub</a></li>
+                    <li><a href="https://www.linkedin.com/in/kauan-petrilho-874bb33b4/" target="_blank" rel="noopener">LinkedIn</a></li>
+                    <li><a href="mailto:kauanpetrilho@gmail.com">E-mail</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
 </body>
 </html>
-
-
